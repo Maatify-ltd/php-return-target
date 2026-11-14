@@ -73,12 +73,8 @@ A target whose query contains a percent-encoded space, such as `/search?q=two%20
 
 The runnable example issues and verifies a target containing `q=two%20words`
 and checks that verification returns the exact encoded target. From a source
-checkout, run `composer check:examples`. To run the updated example against the
-published `rc.2`, install it in a Composer project, copy the
-[updated example](../../examples/basic_usage.php) into that project, and run
-`php basic_usage.php vendor/autoload.php` from the project root. When a future
-distribution includes this updated example, it can also be run in place from
-the consumer root:
+checkout, run `composer check:examples`. With published `rc.3` installed through
+Composer, run the example from the consumer project root:
 
 ```bash
 php vendor/maatify/php-return-target/examples/basic_usage.php vendor/autoload.php

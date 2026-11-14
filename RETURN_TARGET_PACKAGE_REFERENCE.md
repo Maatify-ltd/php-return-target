@@ -4,7 +4,7 @@
 
 The package provides stateless signed internal return-target handling as a framework-agnostic Composer library.
 
-This reference describes artifact target `1.0.0-rc.3`. At qualification, the target is unpublished and the published Release Candidate is [`v1.0.0-rc.2` on Packagist](https://packagist.org/packages/maatify/php-return-target#v1.0.0-rc.2). No Stable release has been published.
+[`1.0.0-rc.3` is the published Release Candidate on Packagist](https://packagist.org/packages/maatify/php-return-target#v1.0.0-rc.3). No Stable release or Stable support line exists.
 
 ## Public Runtime Contract
 

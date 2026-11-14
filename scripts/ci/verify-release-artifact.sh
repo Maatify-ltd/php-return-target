@@ -3,6 +3,11 @@ set -euo pipefail
 
 root="$(git -C "$(dirname "${BASH_SOURCE[0]}")" rev-parse --show-toplevel)"
 target=1.0.0-rc.3
+mode="${2:-candidate}"
+case "$mode" in
+    candidate|published) ;;
+    *) printf 'Unknown archive verification mode: %s\n' "$mode" >&2; exit 1 ;;
+esac
 sha="$(git -C "$root" rev-parse --verify "${1:-HEAD}^{commit}")"
 work="$(mktemp -d)"
 finish() {
@@ -35,7 +40,12 @@ for format in git composer; do
         -o -name .idea -o -name .env -o -name '.env.*' -o -name auth.json -o -name '*.pem' -o -name '*.key' \) -print)"
     test -z "$unexpected" || { printf '%s archive has unexpected files:\n%s\n' "$format" "$unexpected" >&2; exit 1; }
     grep -Fx "composer require maatify/php-return-target:$target@RC" "$artifact/README.md"
-    grep -Fx "## [$target]" "$artifact/CHANGELOG.md"
-    grep -F "Release artifact target: \`$target\` (Release Candidate)." "$artifact/SECURITY.md"
+    if [[ "$mode" == candidate ]]; then
+        grep -Fx "## [$target]" "$artifact/CHANGELOG.md"
+        grep -F "Release artifact target: \`$target\` (Release Candidate)." "$artifact/SECURITY.md"
+    else
+        grep -Fx "## [$target] - 2026-11-15" "$artifact/CHANGELOG.md"
+        grep -F "[\`$target\` is the published Release Candidate on Packagist]" "$artifact/SECURITY.md"
+    fi
     printf '[release-artifact] %s archive passed structural checks\n' "$format"
 done

@@ -5,9 +5,7 @@
 
 ## Current Support State
 
-Release artifact target: `1.0.0-rc.3` (Release Candidate). At qualification,
-`1.0.0-rc.3` is unpublished and `1.0.0-rc.2` is the published Release Candidate
-on Packagist. No Stable release or Stable support line exists.
+[`1.0.0-rc.3` is the published Release Candidate on Packagist](https://packagist.org/packages/maatify/php-return-target#v1.0.0-rc.3). No Stable release or Stable support line exists.
 
 The published RC does not establish a supported Stable release line. This
 policy does not present `1.x` or `1.0` as a supported release line.
