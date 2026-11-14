@@ -26,6 +26,8 @@ jobs:
           php-version: '8.4'
           tools: composer:2.10.2
           coverage: none
+      - name: Verify PHP patch floor
+        run: php scripts/ci/check-php-patch-floor.php 8.4
       - run: composer validate --strict
       - run: composer update --no-interaction --prefer-dist --no-progress
       - run: composer check-platform-reqs
@@ -51,6 +53,8 @@ jobs:
           php-version: ${{ matrix.php-version }}
           tools: composer:2.10.2
           coverage: none
+      - name: Verify PHP patch floor
+        run: php scripts/ci/check-php-patch-floor.php "${{ matrix.php-version }}"
       - run: composer validate --strict
       - run: composer update --no-interaction --prefer-dist --no-progress
       - run: composer check-platform-reqs
@@ -68,6 +72,8 @@ jobs:
           php-version: '8.4'
           tools: composer:2.10.2
           coverage: none
+      - name: Verify PHP patch floor
+        run: php scripts/ci/check-php-patch-floor.php 8.4
       - run: composer validate --strict
       - run: composer update --prefer-lowest --prefer-stable --no-interaction --prefer-dist --no-progress
       - run: composer check-platform-reqs
@@ -90,6 +96,8 @@ jobs:
           php-version: '8.4'
           tools: composer:2.10.2
           coverage: none
+      - name: Verify PHP patch floor
+        run: php scripts/ci/check-php-patch-floor.php 8.4
       - run: composer verify:consumer
 
   workflow-lint:

@@ -108,6 +108,10 @@ The repository defines local and CI gates for Composer validation, Composer 2.10
 
 ## Development and Testing
 
+Before running the local checks, run `php scripts/ci/check-php-patch-floor.php 8.4`
+or pass `8.5` for PHP 8.5. The check prints the installed PHP version and
+enforces the CI patch floor for the selected minor.
+
 Latest-compatible local sequence:
 
 ```text
