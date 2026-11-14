@@ -22,9 +22,12 @@ for format in git composer; do
     artifact="$work/$format"
     mkdir "$artifact"
     tar -xf "$work/$format.tar" -C "$artifact"
+    if ! diff -qr "$work/source/src" "$artifact/src"; then
+        printf '%s archive runtime tree differs from candidate %s\n' "$format" "$sha" >&2
+        exit 1
+    fi
     for file in composer.json README.md CHANGELOG.md SECURITY.md LICENSE llms.txt \
-        RETURN_TARGET_PACKAGE_REFERENCE.md docs/guides/USAGE_GUIDE.md examples/basic_usage.php \
-        src/Service/ReturnTargetServiceInterface.php src/Service/HmacReturnTargetService.php; do
+        RETURN_TARGET_PACKAGE_REFERENCE.md docs/guides/USAGE_GUIDE.md examples/basic_usage.php; do
         test -f "$artifact/$file" || { echo "$format archive missing $file" >&2; exit 1; }
         cmp "$work/source/$file" "$artifact/$file"
     done

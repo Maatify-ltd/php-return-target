@@ -7,7 +7,8 @@ bash scripts/ci/verify-release-artifact.sh <candidate-sha>
 ```
 
 The command builds and extracts Git and Composer archives from the exact commit,
-checks the shipped files and the target markers, and records the release target,
+compares the full `src/` tree in each archive with the candidate checkout,
+checks the other required files and target markers, and records the release target,
 full SHA, and outcome. Quality runs the same command on the pull request head
 or on the pushed commit. Use the actual candidate on `main` for release
 qualification.
