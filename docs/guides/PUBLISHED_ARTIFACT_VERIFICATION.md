@@ -5,8 +5,8 @@ supported PHP version, Composer, Git, jq, tar, and diff.
 
 ```bash
 set -eu
-ref=296475973a13f5a06459145aa1f1fa7209782df3
-test "$(git rev-parse 'v1.0.0-rc.2^{commit}')" = "$ref"
+ref=22100b0581600ee51c89f08f93aaf2662023d994
+test "$(git rev-parse 'v1.0.0-rc.3^{commit}')" = "$ref"
 work=$(mktemp -d)
 mkdir "$work/expected" "$work/consumer"
 git archive "$ref" > "$work/expected.tar"
@@ -14,9 +14,9 @@ tar -xf "$work/expected.tar" -C "$work/expected"
 cd "$work/consumer"
 printf '%s\n' '{"minimum-stability":"stable"}' > composer.json
 export COMPOSER_HOME="$work/composer-home" COMPOSER_CACHE_DIR="$work/cache"
-composer --no-plugins --no-scripts require maatify/php-return-target:1.0.0-rc.2@RC --prefer-dist --no-interaction
+composer --no-plugins --no-scripts require maatify/php-return-target:1.0.0-rc.3@RC --prefer-dist --no-interaction
 jq -e --arg ref "$ref" '
-  .packages[] | select(.name == "maatify/php-return-target" and .version == "v1.0.0-rc.2")
+  .packages[] | select(.name == "maatify/php-return-target" and .version == "v1.0.0-rc.3")
   | select(."installation-source" == "dist" and .source.reference == $ref and .dist.reference == $ref)
   | {name, version, "installation-source", "install-path", source, dist}
 ' vendor/composer/installed.json
@@ -35,6 +35,13 @@ Review the installed Composer metadata, README, CHANGELOG, SECURITY, LICENSE,
 Package Reference, usage guide, and examples. Record the installation mode,
 references, archive comparison, and any presentation differences. The Consumer
 Verification Harness checks runtime behavior separately.
+
+## Recorded result for v1.0.0-rc.3
+
+Composer installed the exact published RC via dist in a clean project on PHP
+8.4.27. All 75 files matched the tagged archive, release presentation passed,
+and the bundled example ran with the consumer autoloader. See the
+[published artifact verification in PR #24](https://github.com/Maatify-ltd/php-return-target/pull/24#issuecomment-6885081427).
 
 ## Recorded result for v1.0.0-rc.2
 

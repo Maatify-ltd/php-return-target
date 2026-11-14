@@ -34,7 +34,7 @@ jobs:
       - run: composer update --no-interaction --prefer-dist --no-progress
       - run: composer check-platform-reqs
       - run: composer check:php-constraint
-      - run: bash scripts/ci/verify-release-artifact.sh HEAD
+      - run: bash scripts/ci/verify-release-artifact.sh HEAD published
       - run: composer audit --no-interaction --abandoned=fail
       - run: composer check:syntax
       - run: composer check:whitespace

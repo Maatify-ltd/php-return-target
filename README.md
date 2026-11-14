@@ -9,7 +9,7 @@
 </picture>
 
 [![Status](https://img.shields.io/badge/Status-Release%20Candidate-blue)](CHANGELOG.md)
-[![Version](https://img.shields.io/badge/Version-1.0.0--rc.3-blue)](CHANGELOG.md#100-rc3)
+[![Version](https://img.shields.io/badge/Version-1.0.0--rc.3-blue)](https://packagist.org/packages/maatify/php-return-target#v1.0.0-rc.3)
 [![PHP](https://img.shields.io/badge/PHP-%3E%3D8.4.27%20%3C8.5.0%20%7C%7C%20%3E%3D8.5.12%20%3C8.6.0-8892BF)](composer.json)
 [![License](https://img.shields.io/badge/License-Proprietary-green)](LICENSE)
 [![PHPStan](https://img.shields.io/badge/PHPStan-Level%20Max-4E8CAE)](phpstan.neon)
@@ -35,9 +35,9 @@ Stateless signed internal return-target handling for framework-agnostic PHP appl
 
 ## Status
 
-**Release artifact target — `1.0.0-rc.3` (Release Candidate)**
+**Published Release Candidate — `1.0.0-rc.3`**
 
-At qualification, `1.0.0-rc.3` is unpublished. [`1.0.0-rc.2`](https://packagist.org/packages/maatify/php-return-target#v1.0.0-rc.2) is the published Release Candidate on Packagist. No Stable release or Stable support line exists.
+[`1.0.0-rc.3` is the published Release Candidate on Packagist](https://packagist.org/packages/maatify/php-return-target#v1.0.0-rc.3). No Stable release or Stable support line exists.
 
 ## Key Features
 
@@ -57,13 +57,11 @@ At qualification, `1.0.0-rc.3` is unpublished. [`1.0.0-rc.2`](https://packagist.
 
 ## Installation
 
-After publication, install this exact artifact through Packagist:
+Install the published Release Candidate through Packagist:
 
 ```shell
 composer require maatify/php-return-target:1.0.0-rc.3@RC
 ```
-
-For the published `rc.2` at qualification, see its [version-specific README](https://github.com/Maatify-ltd/php-return-target/blob/v1.0.0-rc.2/README.md).
 
 ## Quick Usage
 
