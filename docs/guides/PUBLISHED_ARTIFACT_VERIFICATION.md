@@ -43,6 +43,13 @@ Composer installed the exact published RC via dist in a clean project on PHP
 and the bundled example ran with the consumer autoloader. See the
 [published artifact verification in PR #24](https://github.com/Maatify-ltd/php-return-target/pull/24#issuecomment-6885081427).
 
+The Consumer Verification Harness passed twice on PHP `8.4.27` with sodium.
+Each clean Composer project installed the exact `v1.0.0-rc.3` via Packagist dist
+at `22100b0581600ee51c89f08f93aaf2662023d994`, and ran the shipped harness with
+the project's production autoloader. Both runs passed platform checks and
+produced identical results. See the
+[Consumer Verification Harness evidence in PR #24](https://github.com/Maatify-ltd/php-return-target/pull/24#issuecomment-6885230488).
+
 ## Recorded result for v1.0.0-rc.2
 
 - **Installation and identity — PASS.** On 2026-11-14, the exact Packagist
