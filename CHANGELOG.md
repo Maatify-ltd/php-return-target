@@ -6,6 +6,14 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 ## [Unreleased]
 
+## [1.0.0-rc.3]
+
+### Changed
+
+- Require PHP `>=8.4.27 <8.5.0 || >=8.5.12 <8.6.0`. Consumers on earlier patches must update PHP before installing this RC.
+- Update repository URLs to Maatify-ltd and apply the free written proprietary authorization process under DEC-005.
+- Demonstrate percent-encoded query spaces from a Composer consumer project.
+
 ## [1.0.0-rc.2] - 2026-10-02
 
 ### Changed

@@ -6,7 +6,7 @@
 
 ## Requirements and Non-Goals
 
-The package requires PHP `^8.4`, `ext-hash`, `ext-json`, `maatify/crypto ^1.0`, `maatify/exceptions ^1.0`, and `maatify/shared-common ^1.0`. The Host must provide a public `KeyProviderInterface` implementation and a `ClockInterface` implementation.
+The package requires PHP `>=8.4.27 <8.5.0 || >=8.5.12 <8.6.0`, `ext-hash`, `ext-json`, `maatify/crypto ^1.0`, `maatify/exceptions ^1.0`, and `maatify/shared-common ^1.0`. The Host must provide a public `KeyProviderInterface` implementation and a `ClockInterface` implementation.
 
 The canonical `HmacReturnTargetService` requires exactly one ACTIVE key with a
 non-empty active key ID. It consumes Host key material through the public
