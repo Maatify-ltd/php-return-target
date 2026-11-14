@@ -10,6 +10,14 @@
 - **Superseded By:** None
 - **Canonical Contract / Current Owner:** [LICENSE](../../LICENSE), [README](../../README.md#license), [composer.json](../../composer.json)
 
+## Context
+
+[DEC-001](DEC-001-PROPRIETARY-LICENSE.md) selected proprietary licensing, and the
+previous LICENSE required written authorization or a separate agreement. The
+terms did not specify a free request process or how licensee contacts would be
+used. The updated terms identify Maatify Ltd. as the rights holder and provide
+a way to reach authorized consumers about security and critical updates.
+
 ## Decision
 
 The Project Owner confirmed Maatify Ltd. as copyright holder and licensor and
