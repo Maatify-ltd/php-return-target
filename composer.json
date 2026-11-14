@@ -6,7 +6,7 @@
         "php",
         "maatify"
     ],
-    "homepage": "https://github.com/Maatify/php-return-target",
+    "homepage": "https://github.com/Maatify-ltd/php-return-target",
     "type": "library",
     "license": "proprietary",
     "authors": [
@@ -17,9 +17,9 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/Maatify/php-return-target/issues",
-        "source": "https://github.com/Maatify/php-return-target",
-        "security": "https://github.com/Maatify/php-return-target/security/policy"
+        "issues": "https://github.com/Maatify-ltd/php-return-target/issues",
+        "source": "https://github.com/Maatify-ltd/php-return-target",
+        "security": "https://github.com/Maatify-ltd/php-return-target/security/policy"
     },
     "autoload": {
         "psr-4": {
