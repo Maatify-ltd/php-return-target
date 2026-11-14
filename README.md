@@ -2,19 +2,23 @@
 
 # PHP Return Target
 
-![Maatify.dev](https://www.maatify.dev/assets/img/img/maatify_logo_white.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://www.maatify.dev/company-profile/maatify_logo_white.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://www.maatify.dev/company-profile/maatify_logo_dark.svg">
+  <img alt="Maatify.dev" src="https://www.maatify.dev/company-profile/maatify_logo_dark.svg">
+</picture>
 
 [![Status](https://img.shields.io/badge/Status-Release%20Candidate-blue)](CHANGELOG.md)
 [![Version](https://img.shields.io/badge/Version-1.0.0--rc.2-blue)](https://packagist.org/packages/maatify/php-return-target)
-[![PHP](https://img.shields.io/badge/PHP-8.4-8892BF)](composer.json)
+[![PHP](https://img.shields.io/badge/PHP-%5E8.4-8892BF)](composer.json)
 [![License](https://img.shields.io/badge/License-Proprietary-green)](LICENSE)
-[![PHPStan](https://img.shields.io/badge/PHPStan-max-blue)](phpstan.neon)
+[![PHPStan](https://img.shields.io/badge/PHPStan-Level%20Max-4E8CAE)](phpstan.neon)
 
 [![Packagist](https://img.shields.io/badge/Packagist-maatify%2Fphp--return--target-blue)](https://packagist.org/packages/maatify/php-return-target)
 [![Monthly Downloads](https://img.shields.io/packagist/dm/maatify/php-return-target)](https://packagist.org/packages/maatify/php-return-target)
 [![Total Downloads](https://img.shields.io/packagist/dt/maatify/php-return-target)](https://packagist.org/packages/maatify/php-return-target)
-[![Maatify Ecosystem](https://img.shields.io/badge/Maatify-Ecosystem-blueviolet)](https://github.com/Maatify)
-[![Install](https://img.shields.io/badge/Install-1.0.0--rc.2-brightgreen)](https://packagist.org/packages/maatify/php-return-target)
+[![Maatify Ecosystem](https://img.shields.io/badge/Maatify-Ecosystem-blueviolet)](https://github.com/Maatify-ltd)
+[![Install](https://img.shields.io/badge/Install-1.0.0--rc.2%40RC-blue)](#installation)
 
 [![Usage Guide](https://img.shields.io/badge/Usage%20Guide-current-blue)](docs/guides/USAGE_GUIDE.md)
 [![Examples](https://img.shields.io/badge/Examples-maintained-blue)](examples/)
@@ -93,6 +97,7 @@ Normal target, token, policy, or expiry rejection returns `false` or `null`. Inv
 - [Examples](examples/) — maintained Public API examples.
 - [Package Reference](RETURN_TARGET_PACKAGE_REFERENCE.md) — canonical public/runtime/behavioral contract.
 - [Changelog](CHANGELOG.md) — factual project history.
+- [Published artifact verification](docs/guides/PUBLISHED_ARTIFACT_VERIFICATION.md) — exact Packagist dist identity and contents.
 - [Security Policy](SECURITY.md) — private vulnerability reporting route and package security ownership.
 - [Contributing Guide](CONTRIBUTING.md) — contribution paths, local verification, and repository workflow.
 - [Code of Conduct](CODE_OF_CONDUCT.md) — community collaboration and conduct rules.
@@ -102,6 +107,10 @@ Normal target, token, policy, or expiry rejection returns `false` or `null`. Inv
 The repository defines local and CI gates for Composer validation, Composer 2.10 dependency policy audit, latest/lowest dependency resolution, PHP 8.4/8.5 tests, PHPStan max, formatting, syntax, whitespace, examples, Consumer Verification, and workflow lint. GitHub `Final Gate` is the stable aggregate CI check; the actual status for a commit is reported by its GitHub Actions run.
 
 ## Development and Testing
+
+Before running the local checks, run `php scripts/ci/check-php-patch-floor.php 8.4`
+or pass `8.5` for PHP 8.5. The check prints the installed PHP version and
+enforces the CI patch floor for the selected minor.
 
 Latest-compatible local sequence:
 
@@ -139,7 +148,11 @@ Restore latest-compatible dependencies and rerun the final applicable local sequ
 
 ## License
 
-This package is proprietary software owned by Maatify. See [LICENSE](LICENSE) for the applicable terms.
+This package is proprietary software owned by Maatify Ltd. Obtain written
+authorization before use by requesting a free license from
+[support@maatify.dev](mailto:support@maatify.dev). Include your organization name,
+if applicable, and a contact email for license administration, security
+advisories, and critical update notices. See [LICENSE](LICENSE) for the terms.
 
 ## Author
 

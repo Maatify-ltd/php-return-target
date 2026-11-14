@@ -1,7 +1,7 @@
 # Security Policy
 
-[![Maatify PHP Return Target](https://img.shields.io/badge/Maatify-PHP%20Return%20Target-blue?style=for-the-badge)](https://github.com/Maatify/php-return-target)
-[![Maatify Ecosystem](https://img.shields.io/badge/Maatify-Ecosystem-9C27B0?style=for-the-badge)](https://github.com/Maatify)
+[![Maatify PHP Return Target](https://img.shields.io/badge/Maatify-PHP%20Return%20Target-blue?style=for-the-badge)](https://github.com/Maatify-ltd/php-return-target)
+[![Maatify Ecosystem](https://img.shields.io/badge/Maatify-Ecosystem-9C27B0?style=for-the-badge)](https://github.com/Maatify-ltd)
 
 ## Current Support State
 

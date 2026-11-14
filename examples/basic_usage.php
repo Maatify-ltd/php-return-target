@@ -10,7 +10,12 @@ use Maatify\ReturnTarget\Service\HmacReturnTargetService;
 use Maatify\ReturnTarget\Validation\ReturnTargetRestrictionPolicyInterface;
 use Maatify\SharedCommon\Contracts\ClockInterface;
 
-require dirname(__DIR__) . '/vendor/autoload.php';
+$autoload = $argv[1] ?? dirname(__DIR__) . '/vendor/autoload.php';
+if (! is_file($autoload)) {
+    fwrite(STDERR, "Pass the Composer autoload path as the first argument.\n");
+    exit(1);
+}
+require $autoload;
 
 final class ExampleClock implements ClockInterface
 {
@@ -66,7 +71,7 @@ $service = new HmacReturnTargetService(
     $policy,
 );
 
-$target = '/orders%2F15?tab=a%2Fb';
+$target = '/orders%2F15?tab=a%2Fb&q=two%20words';
 if (! $service->accepts($target)) {
     failExample('Example accepted target was rejected.');
 }

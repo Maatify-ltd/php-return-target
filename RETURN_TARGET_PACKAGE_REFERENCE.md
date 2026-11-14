@@ -4,6 +4,8 @@
 
 The package provides stateless signed internal return-target handling as a framework-agnostic Composer library.
 
+The current published Release Candidate is [`v1.0.0-rc.2` on Packagist](https://packagist.org/packages/maatify/php-return-target#v1.0.0-rc.2). No Stable release has been published.
+
 ## Public Runtime Contract
 
 - `Maatify\\ReturnTarget\\Service\\ReturnTargetServiceInterface` — `accepts(string): bool`, `issue(string): ?string`, and `verify(string): ?VerifiedReturnTargetDTO`.
