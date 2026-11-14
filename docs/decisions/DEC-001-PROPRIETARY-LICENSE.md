@@ -4,12 +4,12 @@
 
 - **Decision ID:** `DEC-001`
 - **Title:** Proprietary Package Licensing
-- **Status:** `ACTIVE`
+- **Status:** `SUPERSEDED`
 - **Date:** `2026-09-28`
 - **Decision Authority / Deciders:** Project Owner
 - **Scope / Concern:** Repository and package licensing
 - **Supersedes:** None
-- **Superseded By:** None
+- **Superseded By:** `DEC-005`
 - **Canonical Contract / Current Owner:** [composer.json](../../composer.json), [LICENSE](../../LICENSE)
 
 ## Context

@@ -144,7 +144,11 @@ Restore latest-compatible dependencies and rerun the final applicable local sequ
 
 ## License
 
-This package is proprietary software owned by Maatify. See [LICENSE](LICENSE) for the applicable terms.
+This package is proprietary software owned by Maatify Ltd. Obtain written
+authorization before use by requesting a free license from
+[support@maatify.dev](mailto:support@maatify.dev). Include your organization name,
+if applicable, and a contact email for license administration, security
+advisories, and critical update notices. See [LICENSE](LICENSE) for the terms.
 
 ## Author
 
