@@ -9,8 +9,8 @@
 </picture>
 
 [![Status](https://img.shields.io/badge/Status-Release%20Candidate-blue)](CHANGELOG.md)
-[![Version](https://img.shields.io/badge/Version-1.0.0--rc.2-blue)](https://packagist.org/packages/maatify/php-return-target)
-[![PHP](https://img.shields.io/badge/PHP-%5E8.4-8892BF)](composer.json)
+[![Version](https://img.shields.io/badge/Version-1.0.0--rc.3-blue)](CHANGELOG.md#100-rc3)
+[![PHP](https://img.shields.io/badge/PHP-%3E%3D8.4.27%20%3C8.5.0%20%7C%7C%20%3E%3D8.5.12%20%3C8.6.0-8892BF)](composer.json)
 [![License](https://img.shields.io/badge/License-Proprietary-green)](LICENSE)
 [![PHPStan](https://img.shields.io/badge/PHPStan-Level%20Max-4E8CAE)](phpstan.neon)
 
@@ -18,12 +18,12 @@
 [![Monthly Downloads](https://img.shields.io/packagist/dm/maatify/php-return-target)](https://packagist.org/packages/maatify/php-return-target)
 [![Total Downloads](https://img.shields.io/packagist/dt/maatify/php-return-target)](https://packagist.org/packages/maatify/php-return-target)
 [![Maatify Ecosystem](https://img.shields.io/badge/Maatify-Ecosystem-blueviolet)](https://github.com/Maatify-ltd)
-[![Install](https://img.shields.io/badge/Install-1.0.0--rc.2%40RC-blue)](#installation)
+[![Install](https://img.shields.io/badge/Install-1.0.0--rc.3%40RC-blue)](#installation)
 
 [![Usage Guide](https://img.shields.io/badge/Usage%20Guide-current-blue)](docs/guides/USAGE_GUIDE.md)
 [![Examples](https://img.shields.io/badge/Examples-maintained-blue)](examples/)
 [![Package Reference](https://img.shields.io/badge/Package%20Reference-canonical-blue)](RETURN_TARGET_PACKAGE_REFERENCE.md)
-[![Changelog](https://img.shields.io/badge/Changelog-1.0.0--rc.2-blue)](CHANGELOG.md)
+[![Changelog](https://img.shields.io/badge/Changelog-1.0.0--rc.3-blue)](CHANGELOG.md)
 [![Security Policy](https://img.shields.io/badge/Security%20Policy-current-blue)](SECURITY.md)
 [![Contributing Guide](https://img.shields.io/badge/Contributing%20Guide-current-blue)](CONTRIBUTING.md)
 
@@ -35,9 +35,9 @@ Stateless signed internal return-target handling for framework-agnostic PHP appl
 
 ## Status
 
-**Release Candidate — `1.0.0-rc.2`**
+**Release artifact target — `1.0.0-rc.3` (Release Candidate)**
 
-The published SemVer pre-release `v1.0.0-rc.2` (released 2026-10-02) is available to consumers through Packagist. No Stable release has been published.
+At qualification, `1.0.0-rc.3` is unpublished. [`1.0.0-rc.2`](https://packagist.org/packages/maatify/php-return-target#v1.0.0-rc.2) is the published Release Candidate on Packagist. No Stable release or Stable support line exists.
 
 ## Key Features
 
@@ -48,7 +48,7 @@ The published SemVer pre-release `v1.0.0-rc.2` (released 2026-10-02) is availabl
 
 ## Requirements
 
-- PHP `^8.4` (CI covers PHP `8.4` and `8.5`)
+- PHP `>=8.4.27 <8.5.0 || >=8.5.12 <8.6.0` (CI covers PHP `8.4` and `8.5`)
 - `ext-hash`
 - `ext-json`
 - `maatify/crypto` `^1.0`
@@ -57,11 +57,13 @@ The published SemVer pre-release `v1.0.0-rc.2` (released 2026-10-02) is availabl
 
 ## Installation
 
-The published Release Candidate is available through Packagist:
+After publication, install this exact artifact through Packagist:
 
 ```shell
-composer require maatify/php-return-target:1.0.0-rc.2@RC
+composer require maatify/php-return-target:1.0.0-rc.3@RC
 ```
+
+For the published `rc.2` at qualification, see its [version-specific README](https://github.com/Maatify-ltd/php-return-target/blob/v1.0.0-rc.2/README.md).
 
 ## Quick Usage
 
@@ -97,6 +99,7 @@ Normal target, token, policy, or expiry rejection returns `false` or `null`. Inv
 - [Examples](examples/) — maintained Public API examples.
 - [Package Reference](RETURN_TARGET_PACKAGE_REFERENCE.md) — canonical public/runtime/behavioral contract.
 - [Changelog](CHANGELOG.md) — factual project history.
+- [Release artifact verification](docs/guides/RELEASE_ARTIFACT_VERIFICATION.md) — exact candidate archive checks.
 - [Published artifact verification](docs/guides/PUBLISHED_ARTIFACT_VERIFICATION.md) — exact Packagist dist identity and contents.
 - [Security Policy](SECURITY.md) — private vulnerability reporting route and package security ownership.
 - [Contributing Guide](CONTRIBUTING.md) — contribution paths, local verification, and repository workflow.
@@ -118,6 +121,7 @@ Latest-compatible local sequence:
 composer validate --strict
 composer update --no-interaction --prefer-dist --no-progress
 composer check-platform-reqs
+composer check:php-constraint
 composer audit --no-interaction --abandoned=fail
 composer check:syntax
 composer check:whitespace
@@ -135,6 +139,7 @@ Lowest-supported dependency sequence begins with:
 ```text
 composer update --prefer-lowest --prefer-stable --no-interaction --prefer-dist --no-progress
 composer check-platform-reqs
+composer check:php-constraint
 composer audit --no-interaction --abandoned=fail
 composer check:syntax
 composer format:check

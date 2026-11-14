@@ -5,7 +5,9 @@
 
 ## Current Support State
 
-The `v1.0.0-rc.2` Release Candidate is the current Release Candidate, published as a pre-release through Packagist. No Stable release has been published.
+Release artifact target: `1.0.0-rc.3` (Release Candidate). At qualification,
+`1.0.0-rc.3` is unpublished and `1.0.0-rc.2` is the published Release Candidate
+on Packagist. No Stable release or Stable support line exists.
 
 The published RC does not establish a supported Stable release line. This
 policy does not present `1.x` or `1.0` as a supported release line.

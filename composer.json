@@ -37,9 +37,10 @@
         "maatify/crypto": "^1.0",
         "maatify/exceptions": "^1.0",
         "maatify/shared-common": "^1.0",
-        "php": "^8.4"
+        "php": ">=8.4.27 <8.5.0 || >=8.5.12 <8.6.0"
     },
     "require-dev": {
+        "composer/semver": "^3.4",
         "php-cs-fixer/shim": "^3.95",
         "phpstan/phpstan": "^2.2",
         "phpunit/phpunit": "^12.5"
@@ -58,6 +59,7 @@
         "test:unit": "phpunit --configuration=phpunit.xml --testsuite=unit",
         "test:system": "phpunit --configuration=phpunit.xml --testsuite=system",
         "check:examples": "php examples/basic_usage.php",
+        "check:php-constraint": "@php scripts/ci/check-php-constraint.php",
         "check:syntax": "scripts/ci/check-php-syntax.sh",
         "check:whitespace": "scripts/ci/check-whitespace.sh",
         "check:workflows": "scripts/ci/run-actionlint.sh",
@@ -68,7 +70,7 @@
         "optimize-autoloader": true,
         "sort-packages": true,
         "platform": {
-            "php": "8.4.0"
+            "php": "8.4.27"
         },
         "policy": {
             "advisories": {

@@ -4,7 +4,7 @@
 
 The package provides stateless signed internal return-target handling as a framework-agnostic Composer library.
 
-The current published Release Candidate is [`v1.0.0-rc.2` on Packagist](https://packagist.org/packages/maatify/php-return-target#v1.0.0-rc.2). No Stable release has been published.
+This reference describes artifact target `1.0.0-rc.3`. At qualification, the target is unpublished and the published Release Candidate is [`v1.0.0-rc.2` on Packagist](https://packagist.org/packages/maatify/php-return-target#v1.0.0-rc.2). No Stable release has been published.
 
 ## Public Runtime Contract
 
@@ -71,7 +71,7 @@ package-owned mappings are `InvalidReturnTargetConfigurationException` to the
 `maatify/exceptions` `INVALID_ARGUMENT` contract and
 `ReturnTargetCryptoConfigurationException` to `MAATIFY_ERROR`. Classified codec
 failures remain governed by the codec contract; unknown failures are not blanket-wrapped
-or swallowed. The direct Runtime dependencies are PHP `^8.4`, `ext-hash`, `ext-json`,
+or swallowed. The direct Runtime dependencies are PHP `>=8.4.27 <8.5.0 || >=8.5.12 <8.6.0`, `ext-hash`, `ext-json`,
 `maatify/crypto ^1.0`, `maatify/exceptions ^1.0`, and `maatify/shared-common ^1.0`.
 
 ## Public API Inventory
@@ -232,7 +232,7 @@ The `Adapter/`, `Config/`, `DTO/`, `Exception/`, `Service/`, and `Validation/` r
 
 Composer identity, requirements, dependencies, autoloading, configuration, stability, and distribution metadata are owned by `composer.json`.
 
-The current direct Runtime dependencies are `php ^8.4`, `ext-hash *`, `ext-json *`, `maatify/crypto ^1.0`, `maatify/exceptions ^1.0`, and `maatify/shared-common ^1.0`.
+The current direct Runtime dependencies are PHP `>=8.4.27 <8.5.0 || >=8.5.12 <8.6.0`, `ext-hash *`, `ext-json *`, `maatify/crypto ^1.0`, `maatify/exceptions ^1.0`, and `maatify/shared-common ^1.0`.
 
 ## Technical Consumer Workflow
 
