@@ -34,6 +34,7 @@ Construct `HmacReturnTargetService` with `ReturnTargetConfig`, a Host-owned `Key
 | Exact target and deterministic expiry | [Basic workflow](#basic-workflow) | [`examples/basic_usage.php`](../../examples/basic_usage.php) |
 | Restrict-only policy and current-policy rejection | [Policy workflow](#policy-workflow) | [`examples/basic_usage.php`](../../examples/basic_usage.php) |
 | Unsafe target and expiry rejection | [Rejection workflow](#rejection-workflow) | [`examples/basic_usage.php`](../../examples/basic_usage.php) |
+| Percent-encoded spaces in query values | [Query targets containing spaces](#query-targets-containing-spaces) | [Runnable example](../../examples/basic_usage.php) |
 
 ## Basic Workflow
 
@@ -69,6 +70,19 @@ Input → Public Call → Result → Boundary:
 ## Query Targets Containing Spaces
 
 A target whose query contains a percent-encoded space, such as `/search?q=two%20words`, is accepted by the canonical service. The same encoded space in the path, such as `/p%20x?q=1`, and any raw space anywhere are rejected. A `+` stays a literal `+`. `verify()` returns the exact original representation (`/search?q=two%20words`); it is never rewritten to a decoded or `+` form. A restriction policy sees the single-decoded inspection form (`/search?q=two words`) once per evaluation. This behavior is available in `v1.0.0-rc.2`; the previous release `v1.0.0-rc.1` rejected such targets.
+
+The runnable example issues and verifies a target containing `q=two%20words`
+and checks that verification returns the exact encoded target. From a source
+checkout, run `composer check:examples`. To run the updated example against the
+published `rc.2`, install it in a Composer project, copy the
+[updated example](../../examples/basic_usage.php) into that project, and run
+`php basic_usage.php vendor/autoload.php` from the project root. When a future
+distribution includes this updated example, it can also be run in place from
+the consumer root:
+
+```bash
+php vendor/maatify/php-return-target/examples/basic_usage.php vendor/autoload.php
+```
 
 ## Canonical Contract
 
